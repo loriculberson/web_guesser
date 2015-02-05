@@ -1,8 +1,26 @@
 <html>
- <head></head>
- <body>
-    <p>
-    The SECRET NUMBER is: <%= secret_num %>
-    </p>
+ <head> 
+    <meta charset="UTF-8">
+    <title>Web-based Number Guesser</title> 
+  </head>
+  <body>
+
+  <h1>Web Guesser</h1>
+  <h4>Guess a number between 0 and 100</h4> 
+
+
+    <form>
+      <p>The secret number is: <%=secret_num%>
+      <p>Guess: <%=guess_count%>
+      <p>Enter your guess:
+        <input type='text' name='guess' />
+        <input type='submit' value='Guess!' /><br>
+
+      </p>
+    </form>
+      <p>
+        <%=message %>
+      </p>
+   
   </body>
 </html>
