@@ -2,8 +2,35 @@
  <head> 
     <meta charset="UTF-8">
     <title>Web-based Number Guesser</title> 
+
+    <style>
+      .way-off  {
+        background: red;
+      }
+
+      .within-range {
+        background: rgb(0, 204, 204);
+      }
+
+      .correct {
+        background: rgb(0, 153, 0);
+      }
+
+    </style>
+
   </head>
-  <body>
+
+  
+    <% if message == ""%>
+      <body>
+    <% elsif message == "Way too high!" || message == "Way too low!" %> 
+      <body class= "way-off">
+    <%elsif message == "Too high" || message == "Too low" %>
+      <body class= "within-range">
+    <%else %>
+      <body class= "correct">
+    <% end %>
+
 
   <h1>Web Guesser</h1>
   <h4>Guess a number between 0 and 100</h4> 
